@@ -81,8 +81,8 @@ class Command():
 
 
 class Task(Node):
-    def __init__(self, id: str, description: str, commands: [Command] = None, max_retries: int = None) -> None:
-        super().__init__(id, description)
+    def __init__(self, id: str, description: str, commands: [Command] = None, max_retries: int = None, labels: {str: str} = None) -> None:
+        super().__init__(id, description, labels)
         self.commands = []
         self.max_retries = max_retries
 
